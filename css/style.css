@@ -1,0 +1,112 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #0b1c2a url("../peak-background.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Container do ticket */
+.ticket {
+  width: 380px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+  border: 2px solid #2d4e68;
+  position: relative;
+}
+
+/* Cabeçalho estilo voo */
+.ticket-header {
+  background: linear-gradient(90deg, #2d4e68, #4a7ea3);
+  color: #fff;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 2px;
+}
+
+.ticket-header .arrow {
+  font-size: 1.2rem;
+}
+
+/* Corpo do ticket */
+.ticket-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.field label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #2d4e68;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.field input {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.divider {
+  margin: 16px 0;
+  border-top: 2px dashed #aaa;
+}
+
+.code {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.ticket-body button {
+  padding: 10px;
+  background: #2d4e68;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.ticket-body button:hover {
+  background: #1b344a;
+  transform: scale(1.03);
+}
+
+/* Detalhes de recorte estilo passagem */
+.ticket::before, .ticket::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #0b1c2a;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.ticket::before {
+  left: -10px;
+}
+
+.ticket::after {
+  right: -10px;
+}
